@@ -1,0 +1,42 @@
+//API-1
+GET http://localhost:3000/todos/
+
+###
+
+//API-2
+//Returns a specific todo based on the todo ID
+
+GET http://localhost:3000/todos/2/
+
+###
+
+//API-3
+//POST Create a todo in the todo table
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+###
+
+//API-4
+//PUT Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{
+  "priority": "LOW"
+}
+
+###
+
+//API-5
+//DELETE-> Deletes a todo from the todo table based on the todo ID
+
+DELETE http://localhost:3000/todos/2/
